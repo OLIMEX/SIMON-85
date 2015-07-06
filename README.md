@@ -4,7 +4,7 @@ The board is an implementaion of the popular simon game which tests and trains y
 
 The only hardware requirement for normal use of the board is:
 
-- USB type A to USB mini cable – to connect to a personal computer; used for powering the board and uploading new programs via Digisparks' Arduino
+- USB type A to USB mini cable â€“ to connect to a personal computer; used for powering the board and uploading new programs via Digisparks' Arduino
 
 The board can be programmed with Digispark's Arduino distributions. Link to the download page of Digispark's Arduino distributions, suitable for Windows, Linux and MacOS: http://digistump.com/wiki/digispark/tutorials/connecting
 
@@ -46,6 +46,11 @@ LOW					0xE2		CKDIV8: NO,	CKOUT: NO, SUT<1..0>: 6CK/14CK + 64 ms,
 
 The core design of the board is similar to the design of the previously released OLinuXino-85 and FOSDEM-85 boards. This might be helpful in your attempt to implementing additional examples.
 
-THE DESIGN OF SIMON-85 IS BASED HEAVILY ON THE LITTLE WIRE'S DESIGN BY IHSAN KEHRIBAR AND USES DIGISTUMP'S DIGISPARK SOFTWARE. SIMON-85 WOULD NOT HAVE BEEN POSSIBLE WITHOUT THE EXISTENCE OF BOTH LITTLE WIRE AND DIGISPARK PROJECTS.
+THE DESIGN OF SIMON-85 IS BASED HEAVILY ON THE LITTLE WIRE'S DESIGN BY IHSAN KEHRIBAR AND USES MICRONUCLEUS BOOTLOADER AND DIGISTUMP'S DIGISPARK SOFTWARE. SIMON-85 WOULD NOT HAVE BEEN POSSIBLE WITHOUT THE EXISTENCE OF THESE PROJECTS.
 
 The board is completely open software and open hardware.
+
+Product pages:
+
+* SIMON-85: https://www.olimex.com/Products/Duino/AVR/SIMON-85/open-source-hardware
+* SIMON-85-KIT (DIY kit): https://www.olimex.com/Products/Duino/AVR/SIMON-85-KIT/open-source-hardware
