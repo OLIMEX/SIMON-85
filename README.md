@@ -35,14 +35,11 @@ Simon.hex is the name of our binary code
 
 3) About the ATTINY85 Fuses
 ========================
-				HEX value		Description
-EXTENDED			0xFE		------
+Fuse - HEX value - Value description
 
-HIGH				0xDF		RSTDISBL: NO, DWEN: NO, SPIEN: YES, WDTON: NO,
-								EESAVE: Not preserved, BODLEVEL<2..0>: BOD Disabled
-								
-LOW					0xE2		CKDIV8: NO,	CKOUT: NO, SUT<1..0>: 6CK/14CK + 64 ms,
-								CKSEL<3..0>: 0010 - 8.0 MHz(Calibrated Internal Oscillator)
+EXTENDED - 0xFE	- -----
+HIGH - 0xDF - RSTDISBL: NO, DWEN: NO, SPIEN: YES, WDTON: NO, EESAVE: Not preserved, BODLEVEL<2..0>: BOD Disabled
+LOW - 0xE2 - CKDIV8: NO,	CKOUT: NO, SUT<1..0>: 6CK/14CK + 64 ms, CKSEL<3..0>: 0010 - 8.0 MHz(Calibrated Internal Oscillator)
 
 The core design of the board is similar to the design of the previously released OLinuXino-85 and FOSDEM-85 boards. This might be helpful in your attempt to implementing additional examples.
 
