@@ -1,10 +1,10 @@
-SIMON-85
+# SIMON-85
 
+## About
 The board is an implementaion of the popular simon game which tests and trains your short-term memory. There are four LEDs, four buttons and a buzzer. The LEDs blink in random pattern which you should repeat with the buttons. Each successful guess makes the buzzer produce a sound. Each successful guess increments the amount of blinks, thus the difficulty.
 
 The only hardware requirement for the typical use of the board is:
-
-- USB type A to USB mini cable – to connect to a personal computer; it is used for powering the board and uploading new programs via Arduino
+* USB type A to USB mini cable – to connect to a personal computer; it is used for powering the board and uploading new programs via Arduino
 
 The board can be programmed with Digispark's Arduino distributions. Link to the download page of Digispark's Arduino distributions, suitable for Windows, Linux and MacOS: http://digistump.com/wiki/digispark/tutorials/connecting
 
@@ -12,33 +12,24 @@ The initial bootloader firmware can be uploaded with any combination of third pa
 
 The binaries are suitable only for SIMON-85 board.
 
-HOW TO UPLOAD THE BINARIES:
+## How to upload binaries:
 
-1) Use AVR/Atmel Studio or AVRDude to upload respectivley the .elf or the .hex to the target ATtiny85.
-
+### AVR/Atmel studio
+Use AVR/Atmel Studio or AVRDude to upload respectivley the .elf or the .hex to the target ATtiny85.
 The .elf file contains the proper fuses and configuration bits. If you use the .hex you would need to set the fuses manually.
 
-*It is always recommended to use the latest .hex or the latest .elf!*
+***It is always recommended to use the latest .hex or the latest .elf!***
 
-2) If you use AVRDude then you need to pass the fuse settings as command line:
+## avrdude
+If you use AVRDude then you need to pass the fuse settings as command line:
 
-lfuse:w:0xE1:m -U hfuse:w:0xDD:m -U efuse:w:0xFE:m
+    avrdude -c avrispmkII -p attiny85 -U lfuse:w:0xE1:m -U hfuse:w:0xDD:m -U efuse:w:0xFE:m
 
-Usually the command to program the board via AVRDude looks like:
+If you use another programmer change ***avrispmkII*** e.g. ****stk500v2****:
 
-avrdude -c stk500v2 -P com26 -p t85 -U flash:w:SIMON-85-rev-3-boot-1-11.hex -U lfuse:w:0xE1:m -U hfuse:w:0xDD:m -U efuse:w:0xFE:m
+    avrdude -c stk500v2 -P com26 -p attiny85 -U flash:w:<latest_version>.hex -U lfuse:w:0xE1:m -U hfuse:w:0xDD:m -U efuse:w:0xFE:m
 
-,where
-
--stk500v2 is the programmer's interface abriviation as per AVRdude's documentation
-
--com26 is the port where stk500v2 can be found by the operating system
-
--t85 is the abriviation of the name of the target microcontroller as per AVRdude's documentation
-
--SIMON-85-rev-3-boot-1-11.hex is the name of our binary
-
-3) About the ATtiny85 fuses
+## About the ATtiny85 fuses
 
 Fuse name  |HEX value|Description
 -----------|---------|-----------
