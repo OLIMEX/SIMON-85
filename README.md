@@ -47,3 +47,8 @@ Product pages:
 
 * SIMON-85: https://www.olimex.com/Products/Duino/AVR/SIMON-85/open-source-hardware
 * SIMON-85-KIT (DIY kit): https://www.olimex.com/Products/Duino/AVR/SIMON-85-KIT/open-source-hardware
+
+## LICENSE
+* Software License is GPL3
+* Hardware License is Apache 2.0
+* Documentation License is CC-BY-SA3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
